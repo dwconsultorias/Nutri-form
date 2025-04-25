@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Nutri Inteligente</title>
+</head>
+<body>
+  <form action="/processar_formulario" method="POST">
+    <h2>Informações Pessoais</h2>
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone">
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="0" required>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" required>
+      <option value="">Selecione</option>
+      <option value="feminino">Feminino</option>
+      <option value="masculino">Masculino</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <h2>Dados Antropométricos</h2>
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso" step="0.1" required>
+
+    <label for="altura">Altura (cm):</label>
+    <input type="number" id="altura" name="altura" required>
+
+    <h2>Objetivo</h2>
+    <label for="objetivo">Qual é o seu objetivo principal?</label>
+    <select id="objetivo" name="objetivo" required>
+      <option value="">Selecione</option>
+      <option value="emagrecimento">Emagrecimento</option>
+      <option value="ganho_massa">Ganho de Massa</option>
+      <option value="definicao">Definição Muscular</option>
+      <option value="saude">Melhorar a Saúde</option>
+    </select>
+
+    <h2>Preferências Alimentares</h2>
+    <label for="restricoes">Possui alguma restrição alimentar?</label>
+    <input type="text" id="restricoes" name="restricoes">
+
+    <label for="preferencias">Alimentos que prefere incluir na dieta:</label>
+    <input type="text" id="preferencias" name="preferencias">
+
+    <h2>Atividade Física</h2>
+    <label for="atividade">Pratica atividade física regularmente?</label>
+    <select id="atividade" name="atividade" required>
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label for="frequencia">Se sim, qual a frequência semanal?</label>
+    <input type="text" id="frequencia" name="frequencia">
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
